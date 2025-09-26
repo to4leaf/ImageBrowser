@@ -7,6 +7,8 @@
 # outside the terms of the corresponding EULA(s).
 # ********************************************************************
 
+# !!2300줄 부터 수정!!
+
 from Katana import QtCore, QtGui, UI4, NodegraphAPI, DrawingModule, Nodes3DAPI
 
 try:
