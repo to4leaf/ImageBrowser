@@ -1,0 +1,169 @@
+# -*- coding: utf-8 -*-
+#
+# 현재 구성된 데이터들이며, 상황에 따라 바로 추가 가능한 리스트
+#
+# data_dict 아이템 리스트
+# 'bit_depth': '8' 
+# 'color_splace': ['ACES', 'sRGB']
+# 'dependencies_exr': ''
+# 'dependencies_tex': ''
+# 'ext_list': ['exr', 'tex']
+# 'format': '.hdr'
+# 'frame': []
+# 'issue_check': ''
+# 'library_path': '/storenext/user/lgt/joonsoo/test/p_library_folder/LightSourceLibrary/WW/HDRI/Sky/Sunrise/Haenam_S002_fly_AA',
+# 'mode': 'HDRI'
+# 'name': 'Haenam_S002_fly_AA'
+# 'org_list': ['/home/w10110/\xeb\xb0\x94\xed\x83\x95\xed\x99\x94\xeb\xa9\xb4/image/Haenam_S002_fly_AA.hdr']
+# 'prman_path': '/storenext/user/lgt/joonsoo/test/prman_preset_browser/RenderManAssetLibrary/EnvironmentMaps/WW/Sky/Sunrise/Haenam_S002_fly_AA.rma'
+# 'res_dict': {'2k': '50%', '4k': '100%'}
+# 'size': [4096, 2048]
+# 'suffix_list': ['']
+#
+# ocio 아이템 리스트
+# 'config': '1.0.3'
+# 'name': 'aces 1.0.3'
+# 'path': '/westworld/inhouse/tool/rez-packages/ocio_config/master/platform-linux/arch-x86_64/OpenColorIO-Configs/aces_1.0.3/config.ocio'
+#
+#
+#
+# 빈 값이거나 기본 값은 고정으로 들어가는 값
+# data_dict, ocio 리스트는 가져온 데이터를 추가해주는 것들
+# self 리스트는 yaml에 있는 딕셔너리 구조를 추가해주는 것들
+# py는 파이썬에서 작동하는 것들, 없어도 되지만 가시성을 위해 추가
+
+
+#
+# 메인 구조  ==============================================================
+#
+
+libraryJson:
+    name: ["data_dict", "name"]
+    mode: ["data_dict", "mode"]
+    asset: 
+        dependencies:
+            imageExt: ["data_dict", "dependencies_exr"]
+            imageTex:  ["data_dict", "dependencies_tex"]
+            frame: ["data_dict", "frame"]
+        variable:
+            resolutuion: ["data_dict", "res_dict"]
+            extension: ["data_dict", "ext_list"]
+            suffix: ["data_dict", "suffix_list"]
+            colorSpace: ["data_dict", "color_splace"]
+    lightSourcePath: ["data_dict", "library_path"]
+    PrmanBrowserPath: ["data_dict", "prman_path"]
+    ocio: ["self", "ocio"]
+    metadata: ["self", "metadata"]
+
+
+prmanJson:
+    RenderManAsset:
+        ocio: ["self", "ocio"]
+        usedNodeTypes: []
+        storage:
+            path: ["data_dict", "library_path"]
+            mode: 1
+            key: ["data_dict", "name"]
+        label: ["data_dict", "name"]
+        version: 0.0
+        asset: ["py"]
+        previewType: "std"
+    name: ["data_dict", "name"]
+    lightSourcePath: ["data_dict", "library_path"]
+    PrmanBrowserPath: ["data_dict", "prman_path"]                 
+    
+    
+#
+# 추가되는 구조  ==============================================================
+# 메인 구조에 self 리스트들 
+#   
+
+
+envMap:
+    specs:
+        description: ""
+        filename: ""
+        originalBitDepth: ["data_dict", "bit_depth"]
+        originalFormat: ["data_dict", "format"]
+        displayWindowSize: ["data_dict", "size"]
+        originalSize: ["data_dict", "size"]
+        displayWindowOrigin: [0, 0]
+    dependencies: []
+    compatibility: ["self", "compatibility"]
+    metadata: ["self", "metadata"]
+
+
+nodeGraph:
+    displayFilterList: []
+    nodeList: []
+    connectionList: []
+    dependencies: []
+    displayChannelList: []
+    compatibility: ["self", "compatibility"]
+    metadata: ["self", "metadata"]
+     
+    
+ocio:
+    path: ["ocio", "path"]
+    config: ["ocio", "config"]
+    
+    
+compatibility:
+    hostNodeTypes: []
+    host:
+        version: ""
+        name: ""         
+    renderer:
+        version: ""
+        
+        
+#
+# 메타데이터  ==============================================================
+#
+
+# 저장되는 이름은 metadata로 필요한 데이터만 뽑아서 구성되게 파이썬으로 구성        
+meta:        
+    default:
+        auto:
+            version: 0.0
+            author: ["py"]
+            created: ["py"]    
+            Category: ["data_dict", "category"]
+            File Format: ["data_dict", "ext_list"]
+        manual:
+            Tag: 
+            Copyright: 
+            Recommended Case:
+            Description:             
+    image:
+        auto:
+            Bit Depth: ["data_dict", "bit_depth"]
+            Channel: ["data_dict", "channel"]
+            Dimensions: ["data_dict", "size"] 
+            Width: ["data_dict", "width"]
+            Height: ["data_dict", "height"]
+    hdri:
+        auto:
+            Color Splace: ["data_dict", "color_splace"]
+            Edited Type: ["data_dict", "suffix_list"]    
+            Variant Type: ["data_dict", "res_dict"]
+        manual:
+            Location:
+            Time of Day:
+    gobo:
+        auto:
+            frame: ["data_dict", "frame"]
+        manual:
+            Pattern Type:
+            Symmetry:
+    ies:
+        manual:
+            Manufacturer:
+            Model Number:
+
+
+
+
+
+
+    

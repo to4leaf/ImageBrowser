@@ -1,0 +1,218 @@
+# -*- coding: utf-8 -*-
+
+
+Tag:
+    Lighting:
+        - 'Bright'
+        - 'Soft'
+        - 'Harsh'
+        - 'Warm'
+        - 'Cool'                
+        - 'Sunlight'
+        - 'Artificial'
+        - 'Shadows'
+        - 'Direct Light'
+        - 'Diffuse Light'
+    Value:
+        - 'Low Contrast'
+        - 'Middle Contrast'
+        - 'High Contrast'
+        - 'Saturated'                                    
+        - 'Desaturated'
+    Status:
+        - 'Rainy'
+        - 'Snowy'
+        - 'Foggy'    
+        - 'Sunny'
+        - 'Misty'
+    Environment:
+        - 'asphalt'
+        - 'Mountain'
+        - 'Beach'
+        - 'Lake'
+        - 'Snowfield'
+        - 'Cliffside'
+        - 'Road'
+        - 'Street'                                                        
+        - 'Track'
+        - 'Bridge'
+        - 'Tunnel'
+        - 'Parking Lot'
+        - 'Railway'
+        - 'Runway'
+        - 'Crosswalk'
+        - 'City Center'
+        - 'Urban'
+        - 'Skyscraper'
+        - 'Alleyway'
+        - 'Plaza'
+        - 'Stadium'
+        - 'Restaurant'
+        - 'Cafe'
+        - 'Hotel'
+        - 'Office'
+        - 'Warehouse'
+        - 'Temple'
+        - 'Church'                        
+        - 'Farm'          
+        - 'Garden'     
+        - 'Garage'           
+
+
+Description:
+    Information:    
+        - '설명을 써주시면 됩니다.'
+        - '한국어도 가능합니다.'
+
+
+Copyright:
+    Company:
+        - 'WestWorld'
+    Author:
+        - 'unknown'
+        
+
+Recommended Case:
+    Case:
+        - 'Lighting'
+        - 'Studio'
+        - 'Background'
+        - 'Reflections'
+        - 'Texture'
+        - 'Architectural'
+        - 'Interior'
+        - 'Vehicle'
+        - 'Lamp'
+                
+
+Time of Day:
+    Time of Day:
+        - 'Dawn'
+        - 'Sunrise'
+        - 'Morning'
+        - 'Noon'
+        - 'Afternoon'
+        - 'Evening'
+        - 'Dusk'
+        - 'Twilight'
+        - 'Night'
+        - 'Overnight'
+
+
+Location:
+    Continent:
+        - '아시아'
+        - '유럽'
+        - '남아메리카' 
+        - '북아메리카'         
+        - '아프리카'
+        - '오세아니아'
+        - '중동'
+    country:
+        - '한국'
+        - '일본'
+        - '중국'
+        - '미국'
+    Korea:
+        - '서울'
+        - '부산'
+        - '인천'
+        - '대구'
+        - '대전'
+        - '광주'
+        - '울산'
+        - '수원'
+        - '한라산'
+        - '설악산'
+        - '지리산'
+        - '태백산'
+        - '북한산'
+        - '한강'
+        - '낙동강'
+        - '임진강'
+        - '독도'
+        - '울릉도'
+        - '동해'
+        - '서해'
+        - '남해'
+        - '광화문'
+
+
+Pattern Type:
+    Pattern:
+        - 'Dot'
+        - 'Line'
+        - 'Grid'
+        - 'Circle'
+        - 'Spiral'
+        - 'Triangle'
+        - 'Swirl'
+        - 'Splatter'
+        - 'Wave'
+        - 'Fractal'
+        - 'Leave'
+        - 'Cloud'
+        - 'Water Ripple'
+        - 'Fire'
+        - 'Stone'
+        - 'Window'
+        - 'Brick'
+        - 'Door'
+        - 'Snowflake'
+        - 'Lightning'
+        - 'Firework'
+
+
+Symmetry:
+    Symmetry:
+        - '좌우 대칭'
+        - '상하 대칭'
+        - '다축 대칭'
+        - '반사 대칭'
+        - '방사형 대칭'
+        - '대각선 대칭'    
+        - '격자 대칭'                                    
+        - '상하좌우 대칭'        
+        
+
+Manufacturer:
+    Manufacturer:
+        - 'Philips'
+        - 'Osram'
+        - 'Cree Lighting'
+        - 'Acuity Brands Lighting'
+        - 'Zumtobel'
+        - 'ERCO'
+        - 'Cooper Lighting Solutions'
+        - 'Fagerhult'
+        - 'Thorn Lighting'
+        - 'Lutron Electronics'
+        - 'Delta Light'
+        - 'Signify Color Kinetics'                                
+        
+
+Model Number:
+    Philips:
+        - 'CoreLine DN140B'
+        - 'CoreLine BY121P'
+        - 'CoreLine RC160V'
+        - 'CoreLine BVP283'
+        - 'CoreLine WT120C'
+        - 'GreenPerform BY698X'
+        - 'GreenPerform WT470C'
+        - 'GreenPerform BVP175'                                                        
+        - 'TrueForce LED HPI'  
+        - 'TrueForce Core LED'  
+    Osram:
+        - 'LEDVANCE Downlight'
+        - 'LEDVANCE Panel'
+        - 'LEDVANCE High Bay'
+        
+    
+    
+    
+        
+
+
+
+

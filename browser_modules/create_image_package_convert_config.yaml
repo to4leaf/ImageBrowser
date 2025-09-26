@@ -1,0 +1,55 @@
+# -*- coding: utf-8 -*-
+
+
+convertColorspace:
+    ACES: "acescg"
+    sRGB: "Utility - Linear - sRGB"
+        
+    
+oiioSetting:
+    command: "rez-env oiio -- oiiotool"
+    version: " "    
+    args:
+        default:
+            - "{input_path}"
+            - "--colorconfig {ocio_path}"
+            - "--colorconvert {color_from} {color_to}"        
+            - "--{res_func} {res_value}"
+            - "-o {ext_path}"
+        png:
+            - "{input_path}"
+            - "--attrib 'ICCProfile' '' "
+            - "--colorconvert {color_from} {color_to}"                    
+            - "--{res_func} {res_value}"
+            - "-o {ext_path}"
+            
+            
+texSetting:
+    command: "rez-env renderman-{version} -- txmake"
+    version: "24.3"    
+    args:
+        default:    
+            - "-verbose"
+            - "-half"
+            - "-envlatl"
+            - "-resize up"
+            - "-format openexr"
+
+
+ffmpegSetting:
+    command: "rez-env ffmpeg -- ffmpeg"
+    version: " "    
+    args:
+        default:    
+            - "-start_number {start_num}"
+            - "-color_primaries 1"
+            - "-color_trc 1"
+            - "-colorspace 1"
+            - "-framerate 23.98"
+            - "-i {input_path}"
+            - "-c:v prores_ks"
+            - "-profile:v 3"
+            - "-y {out_path}"
+
+
+
