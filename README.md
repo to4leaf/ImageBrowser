@@ -1,4 +1,4 @@
-# ImageBrowser
+# ImageLibrary
 
 **English**  
 An image library (HDRI, gobo, IES filter) built on top of **RrmanPresetBrowser**.  
